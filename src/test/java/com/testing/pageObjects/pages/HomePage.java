@@ -16,17 +16,18 @@ public class HomePage extends TopMenuSection {
   public static By ALL_PRODUCTS_TITLE = text("All Products");
   public static By SIMPLE_SNACK_BAR_PAGE_RELOAD_BUTTON = css("simple-snack-bar button");
   public static By SIMPLE_SNACK_BAR = css("simple-snack-bar span");
-  public static By ITEMS_PER_PAGE;
-  public static By OPTION_24;
-  public static By BLOCK_NAME;
-  public static By ADD_TO_BASKET_BUTTON;
-  public static By PRODUCT_INFO_BLOCK;
-  public static By PRODUCT_INFO_PRICE;
-  public static By PRODUCT_INFO_CLOSE;
-  public static By REVIEWS_EXPAND;
-  public static By COMMENT_SECTION;
-  public static By REVIEW_TEXT_FIELD;
-  public static By SUBMIT_BUTTON;
+  public static By ITEMS_PER_PAGE = id("mat-select-value-1");
+  public static By OPTION_24 = id("mat-option-1");
+  public static By BLOCK_NAME = css("mat-card[class='mat-card mat-focus-indicator mat-elevation-z6 ribbon-card']");
+  public static By ADD_TO_BASKET_BUTTON = css("span[class='mat-button-wrapper']");
+  public static By PRODUCT_INFO_BLOCK = id("cdk-overlay-22");
+  public static By PRODUCT_INFO_PRICE = css("p[class='item-price']");
+  public static By PRODUCT_INFO_CLOSE = css("button[class='mat-focus-indicator close-dialog buttons mat-stroked-button mat-button-base']");
+  public static By REVIEWS_EXPAND = css("span[class='mat-content ng-tns-c157-175']");
+  public static By COMMENT_SECTION = css("div[_ngcontent-tcy-c160='ng-star-inserted']");
+  public static By REVIEW_TEXT_FIELD = css("textarea[class='mat-input-element mat-form-field-autofill-control cdk-textarea-autosize mat-autosize ng-tns-c126-176 ng-pristine ng-valid cdk-text-field-autofill-monitored ng-touched']");
+  public static By SUBMIT_BUTTON = id("submitButton");
+  public static By ML_SEARCH = css("input[id='mat-input-0']");
 
   // Public methods ----------------------------------------------------------------------------------------------------
   public void waitForPageToLoad() {

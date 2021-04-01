@@ -4,14 +4,14 @@ Feature: Juice Shop Actions
     And   I click "Dismiss button"
     And   I click "Me want it button"
 
-  @run
+
   Scenario: Set items per page
     When I click "Items per page"
     And  I click "Option 24"
     Then I see "Item list" with the following data:
       | Amount |
       | 24     |
-
+  @run
   Scenario: Search for 500ml
     When I search for "500ml"
     Then I see "search results" with the following data:
