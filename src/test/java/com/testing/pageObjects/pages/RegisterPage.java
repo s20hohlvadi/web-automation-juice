@@ -20,7 +20,7 @@ public class RegisterPage extends TopMenuSection {
   public static By REPEAT_PASSWORD_FIELD = id("repeatPasswordControl");
   public static By SECURITY_QUESTION = css("mat-select[name='securityQuestion']");
   public static By NAME_OF_FAVORITE_PET_OPTION = css("span[class='mat-option-text']");
-  public static By FAVORITE_BOOK = css("span[class='mat-option-text']");
+  public static By FAVORITE_BOOK = text("Your favorite book?");
   public static By SECURITY_QUESTION_LIST = id("mat-select-12-panel");
   public static By SECURITY_ANSWER_FIELD = id("securityAnswerControl");
   public static By REGISTRATION_BUTTON = id("registerButton");

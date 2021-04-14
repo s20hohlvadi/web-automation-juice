@@ -11,7 +11,7 @@ Feature: Juice Shop Actions
     Then I see "Item list" with the following data:
       | Amount |
       | 24     |
-
+  @run
   Scenario: Search for 500ml
     When I click "Search"
     And I search for "500ml"
@@ -106,7 +106,7 @@ Feature: Juice Shop Actions
       | 3456        |
     And  I click "Continue button"
     Then "Wallet balance" should contain "999.00"
-  @run
+
   Scenario: Change password
     When I click "Account button"
     And  I click "Login button"
@@ -136,6 +136,7 @@ Feature: Juice Shop Actions
     When I "log in" with the following data:
       | Email | Password |
       | demo  | demo     |
+    Then I click "Search"
     And  I search for "Apple Juice"
     And  I click "Add to basket button"
     And  I click "Shopping cart button"

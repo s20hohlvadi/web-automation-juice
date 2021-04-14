@@ -19,7 +19,7 @@ public class HomePage extends TopMenuSection {
   public static By ITEMS_PER_PAGE = id("mat-select-value-1");
   public static By OPTION_24 = id("mat-option-1");
   public static By BLOCK_NAME = css("mat-card[class='mat-card mat-focus-indicator mat-elevation-z6 ribbon-card']");
-  public static By ADD_TO_BASKET_BUTTON = css("span[class='mat-button-wrapper']");
+  public static By ADD_TO_BASKET_BUTTON = css("button[class='mat-focus-indicator']");
   public static By PRODUCT_INFO_BLOCK = id("cdk-overlay-22");
   public static By PRODUCT_INFO_PRICE = css("p[class='item-price']");
   public static By PRODUCT_INFO_CLOSE = css("button[class='mat-focus-indicator close-dialog buttons mat-stroked-button mat-button-base']");
@@ -30,7 +30,7 @@ public class HomePage extends TopMenuSection {
 
 
   public static By SEARCH = css("mat-search-bar[id='searchQuery']");
-  public static By ML_SEARCH = id("#mat-input-0");
+  public static By ML_SEARCH = css("#mat-input-0");
 
   public static By ACCOUNT_BUTTON = css("button[id='navbarAccount']");
   public static By LOGIN_BUTTON = css("button[id='navbarLoginButton']");
