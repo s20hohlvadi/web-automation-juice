@@ -12,12 +12,13 @@ import net.thucydides.core.annotations.DefaultUrl;
 @DefaultUrl("/login")
 public class LoginPage extends HomePage {
   // Locators ----------------------------------------------------------------------------------------------------------
-  public static By LOGIN_WITH_GOOGLE_BUTTON;
-  public static By NOT_YET_A_CUSTOMER;
-  public static By REGISTRATION_COMPLETED_SUCCESSFULLY;
-  public static By EMAIL_FIELD;
-  public static By PASSWORD_FIELD;
-  public static By LOGIN_BUTTON;
+  public static By LOGIN_TITLE = text("Login");
+  public static By LOGIN_WITH_GOOGLE_BUTTON = css("button[id='loginButtonGoogle']");
+  public static By NOT_YET_A_CUSTOMER = css("a[class='primary-link']");
+  public static By REGISTRATION_COMPLETED_SUCCESSFULLY = text("Registration completed successfully");
+  public static By EMAIL_FIELD = id("email");
+  public static By PASSWORD_FIELD = css("input[id='password']");
+  public static By LOGIN_BUTTON = css("button[id='loginButton']");
   
   // Public methods ----------------------------------------------------------------------------------------------------
   public void waitForPageToLoad() {

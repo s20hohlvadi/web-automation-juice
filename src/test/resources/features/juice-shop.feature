@@ -11,9 +11,10 @@ Feature: Juice Shop Actions
     Then I see "Item list" with the following data:
       | Amount |
       | 24     |
-  @run
+
   Scenario: Search for 500ml
-    When I search for "500ml"
+    When I click "Search"
+    And I search for "500ml"
     Then I see "search results" with the following data:
       | Name                     | Description                        | Price |
       | Eggfruit Juice (500ml)   | Now with even more exotic flavour. | 8.99  |
@@ -21,6 +22,7 @@ Feature: Juice Shop Actions
       | Strawberry Juice (500ml) | Sweet & tasty!                     | 3.99  |
 
   Scenario: Find comment
+    When I click "Search"
     When I search for "King of the Hill"
     And  I "open item" with the following data:
       | Name             |
@@ -29,9 +31,10 @@ Feature: Juice Shop Actions
     Then "Comment section" should contain "K33p5 y0ur ju1cy 5plu773r 70 y0ur53lf!"
 
   Scenario: Add comment
-    When I "log in" with the following data:
+    Then I "log in" with the following data:
       | Email | Password |
       | demo  | demo     |
+    When I click "Search"
     And  I search for "2020"
     And  I "open item" with the following data:
       | Name                                 |
@@ -76,6 +79,9 @@ Feature: Juice Shop Actions
     | 日本の       | 注文と支払い          | プライバシーとセキュリテ              |  ログアウト     |
 
   Scenario: Increase wallet balance
+    When I click "Account button"
+    And  I click "Login button"
+    Then  I click "Not yet a customer"
     When I "create an account" with the following data:
       | Email field  | Password field | Repeat Password field | Security Question | Security Answer field                                |
       | RANDOM_EMAIL | password       | password              | favorite book     | University Physics with Modern Physics, 13th Edition |
@@ -100,28 +106,31 @@ Feature: Juice Shop Actions
       | 3456        |
     And  I click "Continue button"
     Then "Wallet balance" should contain "999.00"
-
+  @run
   Scenario: Change password
-  When I "create an account" with the following data:
-    | Email field  | Password field | Repeat Password field | Security Question | Security Answer field                                |
-    | RANDOM_EMAIL | password       | password              | favorite book     | University Physics with Modern Physics, 13th Edition |
-  And  I "log in" with the following data:
-    | Email        | Password |
-    | RANDOM_EMAIL | password |
-  And  I click "Account button"
-  And  I click "Privacy And Security option"
-  And  I click "Change password button"
-  And  I set "Current Password field" to "password"
-  And  I set "New Password field" to "SeriousHeadAche"
-  And  I set "Repeat New Password field" to "SeriousHeadAche"
-  And  I click "Change button"
-  Then "Your password was successfully changed." should be "visible"
-  When I click "Account button"
-  And  I click "Logout button"
-  And  I "log in" with the following data:
-    | Email        | Password        |
-    | RANDOM_EMAIL | SeriousHeadAche |
-  Then I am on the "Home" page
+    When I click "Account button"
+    And  I click "Login button"
+    Then  I click "Not yet a customer"
+    When I "create an account" with the following data:
+      | Email field  | Password field | Repeat Password field | Security Question | Security Answer field                                |
+      | RANDOM_EMAIL | password       | password              | favorite book     | University Physics with Modern Physics, 13th Edition |
+    And  I "log in" with the following data:
+      | Email        | Password |
+      | RANDOM_EMAIL | password |
+    And  I click "Account button"
+    And  I click "Privacy And Security option"
+    And  I click "Change password button"
+    And  I set "Current Password field" to "password"
+    And  I set "New Password field" to "SeriousHeadAche"
+    And  I set "Repeat New Password field" to "SeriousHeadAche"
+    And  I click "Change button"
+    Then "Your password was successfully changed." should be "visible"
+    When I click "Account button"
+    And  I click "Logout button"
+    And  I "log in" with the following data:
+      | Email        | Password        |
+      | RANDOM_EMAIL | SeriousHeadAche |
+    Then I am on the "Home" page
 
   Scenario: Add new address
     When I "log in" with the following data:

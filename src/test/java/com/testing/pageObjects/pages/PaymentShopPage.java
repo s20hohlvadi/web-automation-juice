@@ -14,13 +14,13 @@ import net.thucydides.core.annotations.DefaultUrl;
 public class PaymentShopPage extends DeliveryMethodPage{
   // Locators
   // -------------------------------------------------------------------------------------------------------------------
-  public static By MY_PAYMENT_OPTIONS_TITLE;
-  public static By CONTINUE_BUTTON;
-  public static By ADD_NEW_CARD_OPTION;
-  public static By CARD_NAME_FIELD;
-  public static By CARD_NUMBER_FIELD;
-  public static By EXPIRY_MONTH_FIELD;
-  public static By EXPIRY_YEAR_FIELD;
+  public static By MY_PAYMENT_OPTIONS_TITLE = text("My Payment Options");
+  public static By CONTINUE_BUTTON = id("submitButton");
+  public static By ADD_NEW_CARD_OPTION = id("mat-expansion-panel-header-0");
+  public static By CARD_NAME_FIELD = id("mat-input-34");
+  public static By CARD_NUMBER_FIELD = id("mat-input-35");
+  public static By EXPIRY_MONTH_FIELD = id("mat-input-36");
+  public static By EXPIRY_YEAR_FIELD = id("mat-input-37");
   // Public methods
   // -------------------------------------------------------------------------------------------------------------------
   public void waitForPageToLoad(){
