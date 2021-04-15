@@ -13,8 +13,8 @@ import net.thucydides.core.annotations.DefaultUrl;
 public class SearchResultsPage extends HomePage {
   // Locators
   // -------------------------------------------------------------------------------------------------------------------
-  public static By SEARCH_RESULTS_TITLE = text("Search Results - ");
-  
+  public static By SEARCH_RESULTS_TITLE = id("search-result-heading");
+  public static By SEARCH_RESULTS = css("");
   // Public methods
   // -------------------------------------------------------------------------------------------------------------------
   public void waitForPageToLoad() {

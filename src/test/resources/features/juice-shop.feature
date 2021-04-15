@@ -13,8 +13,8 @@ Feature: Juice Shop Actions
       | 24     |
   @run
   Scenario: Search for 500ml
-    When I click "Search"
-    And I search for "500ml"
+
+    When I search for "500ml"
     Then I see "search results" with the following data:
       | Name                     | Description                        | Price |
       | Eggfruit Juice (500ml)   | Now with even more exotic flavour. | 8.99  |

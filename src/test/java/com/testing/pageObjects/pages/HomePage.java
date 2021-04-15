@@ -30,7 +30,6 @@ public class HomePage extends TopMenuSection {
 
 
   public static By SEARCH = css("mat-search-bar[id='searchQuery']");
-  public static By ML_SEARCH = css("#mat-input-0");
 
   public static By ACCOUNT_BUTTON = css("button[id='navbarAccount']");
   public static By LOGIN_BUTTON = css("button[id='navbarLoginButton']");
