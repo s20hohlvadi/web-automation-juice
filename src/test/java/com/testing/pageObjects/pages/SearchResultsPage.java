@@ -13,11 +13,7 @@ import net.thucydides.core.annotations.DefaultUrl;
 public class SearchResultsPage extends HomePage {
   // Locators
   // -------------------------------------------------------------------------------------------------------------------
-  public static By SEARCH_RESULTS_TITLE = id("search-result-heading");
-  public static By SEARCH_RESULTS = css("div[class='mat-tooltip-trigger product']");
-  public static By OPEN_ITEM = css("div[class='item-name']");
-  public static By REVIEWS_EXPAND = id("mat-expansion-panel-header-4");
-  public static By COMMENT_SELECTION = id("div.comment:nth-child(1) > div:nth-child(1) > div:nth-child(1)");
+  public static By SEARCH_RESULTS_TITLE = text("Search Results - ");
   // Public methods
   // -------------------------------------------------------------------------------------------------------------------
   public void waitForPageToLoad() {

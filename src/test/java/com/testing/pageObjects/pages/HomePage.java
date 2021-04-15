@@ -16,7 +16,7 @@ public class HomePage extends TopMenuSection {
   public static By ALL_PRODUCTS_TITLE = text("All Products");
   public static By SIMPLE_SNACK_BAR_PAGE_RELOAD_BUTTON = css("simple-snack-bar button");
   public static By SIMPLE_SNACK_BAR = css("simple-snack-bar span");
-  public static By ITEMS_PER_PAGE = id("mat-select-value-1");
+  public static By ITEMS_PER_PAGE = css("mat-select[id^='mat-select-']");
   public static By OPTION_24 = id("mat-option-1");
   public static By BLOCK_NAME = css("mat-card[class='mat-card mat-focus-indicator mat-elevation-z6 ribbon-card']");
   public static By ADD_TO_BASKET_BUTTON = css("button[class='mat-focus-indicator']");
