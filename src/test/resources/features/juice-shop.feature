@@ -11,18 +11,16 @@ Feature: Juice Shop Actions
     Then I see "Item list" with the following data:
       | Amount |
       | 24     |
-  @run
-  Scenario: Search for 500ml
 
+  Scenario: Search for 500ml
     When I search for "500ml"
     Then I see "search results" with the following data:
       | Name                     | Description                        | Price |
       | Eggfruit Juice (500ml)   | Now with even more exotic flavour. | 8.99  |
       | Lemon Juice (500ml)      | Sour but full of vitamins.         | 2.99  |
       | Strawberry Juice (500ml) | Sweet & tasty!                     | 3.99  |
-
+  @run
   Scenario: Find comment
-    When I click "Search"
     When I search for "King of the Hill"
     And  I "open item" with the following data:
       | Name             |

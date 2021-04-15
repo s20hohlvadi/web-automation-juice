@@ -14,7 +14,10 @@ public class SearchResultsPage extends HomePage {
   // Locators
   // -------------------------------------------------------------------------------------------------------------------
   public static By SEARCH_RESULTS_TITLE = id("search-result-heading");
-  public static By SEARCH_RESULTS = css("");
+  public static By SEARCH_RESULTS = css("div[class='mat-tooltip-trigger product']");
+  public static By OPEN_ITEM = css("div[class='item-name']");
+  public static By REVIEWS_EXPAND = id("mat-expansion-panel-header-4");
+  public static By COMMENT_SELECTION = id("div.comment:nth-child(1) > div:nth-child(1) > div:nth-child(1)");
   // Public methods
   // -------------------------------------------------------------------------------------------------------------------
   public void waitForPageToLoad() {

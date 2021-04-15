@@ -28,14 +28,6 @@ public class HomePage extends TopMenuSection {
   public static By REVIEW_TEXT_FIELD = css("textarea[class='mat-input-element mat-form-field-autofill-control cdk-textarea-autosize mat-autosize ng-tns-c126-176 ng-pristine ng-valid cdk-text-field-autofill-monitored ng-touched']");
   public static By SUBMIT_BUTTON = id("submitButton");
 
-
-  public static By SEARCH = css("mat-search-bar[id='searchQuery']");
-
-  public static By ACCOUNT_BUTTON = css("button[id='navbarAccount']");
-  public static By LOGIN_BUTTON = css("button[id='navbarLoginButton']");
-
-  public static By SELECT_LANGUAGE = css("button.mat-focus-indicator:nth-child(8)");
-
   // Public methods ----------------------------------------------------------------------------------------------------
   public void waitForPageToLoad() {
     getElement(ALL_PRODUCTS_TITLE).waitUntilPresent();

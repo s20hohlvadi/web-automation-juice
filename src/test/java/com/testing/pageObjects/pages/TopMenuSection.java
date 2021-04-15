@@ -20,7 +20,7 @@ public class TopMenuSection extends BasePage {
   public static By SHOPPING_CART_BUTTON = css("button.mat-focus-indicator:nth-child(7)");
   public static By CHOOSE_LANGUAGE_BUTTON= css("button.mat-focus-indicator:nth-child(8)");
   public static By LANGUAGE_LIST = css("div[class='mat-menu-panel-1']");
-  public static By ORDERS_AND_PAYMENT_OPTION;
+  public static By ORDERS_AND_PAYMENT_OPTION ;
   public static By PRIVACY_AND_SECURITY_OPTION;
   public static By LOGOUT_BUTTON;
   public static By CHANGE_PASSWORD_BUTTON;
